@@ -11,8 +11,7 @@ engine = create_engine(settings.DATABASE_URI.unicode_string(), echo=True, future
 
 
 def get_db():
-    with engine.begin() as conn:
-        conn.run_sync(SQLModel.metadata.create_all)
+    SQLModel.metadata.create_all(engine)
 
 
 def get_session() -> AsyncSession:
