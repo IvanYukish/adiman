@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "adimen"
+version = "0.1.0"
+description = ""
+authors = ["IvanYukish <iwan.jukisch@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.109.2"
+uvicorn = "^0.27.1"
+sqlmodel = "^0.0.16"
+pydantic = "^2.6.1"
+alembic = "^1.13.1"
+passlib = "^1.7.4"
+pydantic-settings = "^2.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^69.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
