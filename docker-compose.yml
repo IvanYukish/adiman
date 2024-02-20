@@ -11,15 +11,15 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
     - "5432:5432"
-  django:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command:
-      python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/web
-    ports:
-      - "8000:8000"
-    depends_on:
-      - postgres
+#  app:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    command:
+#      python manage.py runserver 0.0.0.0:8000
+#    volumes:
+#      - .:/web
+#    ports:
+#      - "8000:8000"
+#    depends_on:
+#      - postgres
